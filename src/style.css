@@ -1,0 +1,367 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "PP Neue Montreal";
+  color: #1a1a1a;
+  background-color: #e3e3db;
+  overflow-x: hidden;
+}
+
+h1 {
+  font-size: 60px;
+  font-weight: 500;
+}
+
+p {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  padding: 2em 2.5em;
+  display: flex;
+  justify-content: space-between;
+  mix-blend-mode: difference;
+  z-index: 2;
+}
+
+.links {
+  display: flex;
+  gap: 1em;
+}
+
+section {
+  width: 100vw;
+  height: 100svh;
+  padding: 2.5em;
+  z-index: 1;
+}
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-top: 4em;
+  z-index: 1;
+}
+
+.hero h1 {
+  position: relative;
+  left: -0.05em;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 20vw;
+  letter-spacing: -0.04em;
+  line-height: 1;
+  z-index: 1!important;
+}
+
+.hero-copy {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  z-index: 1;
+}
+
+.outro {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+}
+
+.intro {
+  height: 100%;
+  z-index: 1;
+}
+
+.video-container-desktop {
+  position: relative;
+  transform: translateY(-105%) scale(0.25);
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+  will-change: transform;
+  z-index: 1;
+}
+
+.video-container-desktop .video-title p {
+  position: relative;
+  font-size: 78px;
+  font-weight: 500;
+  z-index: 1;
+}
+
+.video-container-mobile {
+  display: none;
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  z-index: 1;
+}
+
+.video-preview {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16/9;
+  border-radius: 1.5rem;
+  background-color: #b9b9b3;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.video-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 1.5rem;
+  overflow: hidden;
+}
+
+iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 1.5rem;
+  pointer-events: none;
+}
+
+@media (max-width: 900px) {
+  nav,
+  section {
+    padding: 1.5em;
+  }
+
+  .hero {
+    justify-content: flex-end;
+    gap: 2em;
+  }
+
+  .hero h1 {
+    font-size: 19vw;
+  }
+
+  .video-container-desktop {
+    display: none;
+  }
+
+  .video-container-mobile {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+  }
+}
+
+
+/*services*/
+ body {
+      background-color: #f8f9fa;
+    }
+    .gallery-container {
+      padding: 2rem;
+    }
+    .gallery-item {
+      position: relative;
+      overflow: hidden;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      aspect-ratio: 4 / 3; /* Maintain image aspect ratio */
+    }
+    .gallery-item canvas {
+      width: 100%;
+      height: 100%;
+      display: block;
+    }
+
+
+/*footer */
+/* Reset */
+.footer {
+  position: relative;
+  width: 100%;
+  height: 90vh; /* alto del footer */
+  font-family: "Aeonik";
+  background-color: #1a2ffb;
+  overflow: hidden; /* oculta partículas que salgan del contenedor */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100% !important;
+  height: 100% !important;
+  z-index: 0; /* al fondo */
+}
+
+.header-footer {
+  position: relative;
+  z-index: 1; /* encima del canvas */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.header-footer p {
+  color: #fff !important;
+  text-transform: uppercase;
+  font-weight: 400;
+  margin-bottom: 1.5em;
+  font-family: 5rem;
+}
+
+.header-footer h1 {
+  color: #fff;
+  font-size: 9rem;
+  font-weight: 400;
+  line-height: 1;
+  margin-bottom: 0.75em;
+}
+
+button {
+  border: none;
+  outline: none;
+  padding: 1.2em 2.5em;
+  text-transform: uppercase;
+  font-weight: 500;
+  background-color: #fff;
+  border-radius: 2em;
+  cursor: pointer;
+}
+
+
+/*menu*/
+/* menú normal */
+.menu-bar,
+.menu-overlay-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  padding: 2em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1001;
+}
+
+.menu-bar a,
+.menu-open p {
+  color: #fff;
+  cursor: pointer;
+}
+
+.menu-close p {
+  color: #000;
+  cursor: pointer;
+}
+
+.menu-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  padding: 2em;
+  background: #ffffff; /* fondo sólido */
+  z-index: 1002;
+  display: flex;
+  clip-path: polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%);
+  pointer-events: all;
+}
+
+
+
+
+.menu-close-icon {
+  flex: 2;
+  display: flex;
+  align-items: flex-end;
+  cursor: pointer;
+}
+
+.menu-copy {
+  flex: 4;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-top: 2em;
+}
+
+.menu-preview {
+  flex: 4;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+.menu-close-icon p {
+  font-size: 100px;
+  -webkit-text-stroke: 3px #c5fb45;
+  line-height: 70%;
+}
+
+.menu-link-item {
+  width: max-content;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+}
+
+.menu-link-item-holder {
+  position: relative;
+}
+
+.menu-link-item-holder a {
+  color: #000;
+  font-size: 180px;
+  font-weight: 400;
+  letter-spacing: -0.02em;
+  line-height: 95%;
+}
+
+.menu-info {
+  display: flex;
+}
+
+.menu-info-col {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+@media (max-width: 900px) {
+  .menu-close-icon {
+    display: none;
+  }
+
+  .menu-copy {
+    padding-top: 8em;
+  }
+
+  .menu-link-item-holder a {
+    font-size: 60px;
+  }
+}
