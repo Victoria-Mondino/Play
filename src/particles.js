@@ -260,3 +260,7 @@ function windowResized() {
   let footer = document.querySelector(".footer");
   resizeCanvas(footer.offsetWidth, footer.offsetHeight);
 }
+
+window.setup = setup;
+window.draw = draw;
+window.windowResized = windowResized;
